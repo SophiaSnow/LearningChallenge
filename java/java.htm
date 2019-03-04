@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -116,43 +116,43 @@
 
 <h1>Java基础知识</h1>
 
-<div>
+<div id="category">
 <h2>目录</h2>
-<p><a href="#colorful">1.集合的概念</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#realize">2.集合的作用</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#hana">3.与数组的对比</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#hana">4.Java集合框架体系结构</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#hana">5.Collection接口简介</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-<p><a href="#colorful">6.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#realize">7.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p><a href="#gainian">1.集合的概念</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#zuoyong">2.集合的作用</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#duibi">3.与数组的对比</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#jihekuangjia">4.Java集合框架体系结构</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#collection">5.Collection接口简介</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p><a href="#exercise1">6.实例练习1</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#exercise2">7.实例练习2</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="#hana">8.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="#hana">9.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="#hana">10.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </div>
 
-<div>
-<h2>一、集合的概念</h2>
+<div id="gainian">
+<h2>一、集合的概念&nbsp;&nbsp;<a href="#category" style="font-size:1px">category</a></h2>
 <p>1.现实生活中:很多的事物凑在一起，购物车是商品的集合，军队是军人的集合</p>
 <p>2.数学中的集合:具有共同属性的事物的总体</p>
 <p>3.Java中的集合类:是一种工具类，就像是容器，储存任意数量的具有共同属性的对象</p>
 </div>
 
-<div>
-<h2>二、集合的作用</h2>
+<div id="zuoyong">
+<h2>二、集合的作用&nbsp;&nbsp;<a href="#category" style="font-size:1px">category</a></h2>
 <p>1.在类的内部，对数据进行组织</p>
 <p>2.简单而快速地搜索大数量的条目</p>
 <p>3.有的集合接口，提供了一系列排列有序的元素，并且可以在序列中间快速的插入或者删除有关元素</p>
 <p>4.有的集合接口，提供了映射关系，可以通过关键字(key)去快速查找到对应的唯一对象，而这个关键字可以是任意类型</p>
 </div>
 
-<div>
-<h2>三、与数组的对比--为何选择集合而不是数组</h2>
+<div id="duibi">
+<h2>三、与数组的对比--为何选择集合而不是数组&nbsp;&nbsp;<a href="#category" style="font-size:1px">category</a></h2>
 <p>1.数组的长度固定，集合长度可变</p>
 <p>2.数组只能通过下标访问元素，类型固定，而有的集合可以通过任意类型查找所映射的具体对象</p>
 </div>
 
-<div>
-<h2>四、Java集合框架体系结构</h2>
+<div id="jihekuangjia">
+<h2>四、Java集合框架体系结构&nbsp;&nbsp;<a href="#category" style="font-size:1px">category</a></h2>
 <p>1.Collection和Map是java集合框架中的两个根接口</p>
 <p>&nbsp;&nbsp;1.1.Collection有三个子接口:List,Queue,Set</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;1.1.1.List和Queue中存储的元素是排列有序的且可以重复,Set中的元素是无序且不可重复</p>
@@ -165,8 +165,8 @@ Set有一个很重要的实现类是HashSet</p>
 (键值对)的一个实例,Entry类是Map的一个内部类；key和value可以是任意类型的对象</p>
 </div>
 
-<div>
-<h2>五、Collection接口简介</h2>
+<div id="collection">
+<h2>五、Collection接口简介&nbsp;&nbsp;<a href="#category" style="font-size:1px">category</a></h2>
 <h3>Collection接口</h3>
 <p>1.是List,Set,Queue接口的父接口</p>
 <p>2.定义了可用于操作List,Set,Queue的方法--增删改查</p>
@@ -177,8 +177,46 @@ Set有一个很重要的实现类是HashSet</p>
 <p>4.ArrayList底层是由数组实现的</p>
 </div>
 
-<div>
-<h2>实例练习</h2>
+<div id="exercise1">
+<h2>六、实例练习1&nbsp;&nbsp;<a href="#category" style="font-size:1px">category</a></h2>
+<h3>List增删改查</h3>
+<pre>
+package test;
+import java.util.ArrayList;
+public class ListTest {
+  public static void main(String[] args) {
+    ArrayList strings = new ArrayList(); 
+    strings.add("Evan"); 
+    strings.add("Enguge"); 
+    strings.add("Adam"); 
+    System.out.println(strings.size()); 
+    System.out.println(strings.get(0)); 
+    System.out.println(strings.get(1)); 
+    strings.set(0, "goodbye"); 
+    strings.remove(1); 
+    for(int i=0;i&lt;strings.size();i++){
+      System.out.println(strings.get(i));
+    }
+    for(Object s:strings){
+      System.out.println(s);}
+  }
+}
+</pre>
+<p class="tiy"><a target="_blank" href="">亲自试一试</a></p>
+<h3>output</h3>
+<pre>
+3
+Evan
+Enguge
+goodbye
+Adam
+goodbye
+Adam
+</pre>
+</div>
+
+<div id="exercise2">
+<h2>七、实例练习2&nbsp;&nbsp;<a href="#category" style="font-size:1px">category</a></h2>
 <p>实现功能--模拟学生选课功能</p>
 <ul>
 <li>选择课程(往集合中添加课程)</li>
@@ -256,20 +294,147 @@ public class ListTest{
     Course temp=(Course)coursesToSelect.get(0);
     System.out.println("添加了课程:"+temp.id+","+temp.name);
 	
-	Course cr2=new Course("2","C语言");
-	coursesToSelect.add(0,cr2);
-	Course temp2=(Course)coursesToSelect.get(0);
-	System.out.println("添加了课程:"+temp2.id+","+temp2.name);
+    Course cr2=new Course("2","C语言");
+    coursesToSelect.add(0,cr2);
+    Course temp2=(Course)coursesToSelect.get(0);
+    System.out.println("添加了课程:"+temp2.id+","+temp2.name);
+	
+    //元素可重复
+    coursesToSelect.add(cr1);
+    Course temp0=(Course)coursesToSelect.get(2);
+    System.out.println("添加了课程:"+temp0.id+","+temp0.name);
+	
+    Course[] course={new Course("3","离散数学"),new Course("4","汇编语言")};
+    coursesToSelect.addAll(Arrays.asList(course));
+    Course temp3=(Course)coursesToSelect.get(3);
+    Course temp4=(Course)coursesToSelect.get(4);
+    System.out.println("添加了两门课程:"+temp3.id+","+temp3.name+";"+temp4.id+","+temp4.name);
+	
+    Course[] course2={new Course("5","高等数学"),new Course("6","大学英语")};
+    coursesToSelect.addAll(2,Arrays.asList(course2));
+    Course temp5=(Course)coursesToSelect.get(2);
+    Course temp6=(Course)coursesToSelect.get(3);
+    System.out.println("添加了两门课程:"+temp5.id+","+temp5.name+";"+temp6.id+","+temp6.name);
+  }
+  
+  //取得List中的元素的方法
+  public void testGet(){
+    int size=coursesToSelect.size();
+    System.out.println("有如下课程待选:");
+    for(int i=0;i&lt;size;i++){
+      Course cr=(Course)coursesToSelect.get(i);
+      System.out.println("课程:"+cr.id+","+cr.name);
+    }
+  }
+  
+  //通过迭代器来遍历List,迭代器本身也是一个接口
+  public void testIterator(){
+    //通过集合的iterator方法,取得迭代器的实例
+    Iterator it=coursesToSelect.iterator();
+    System.out.println("有如下课程待选(通过迭代器访问):");
+    while(it.hasNext()){
+      Course cr=(Course)it.next();
+      System.out.println("课程:"+cr.id+","+cr.name);
+    }
+  }
+  
+  //通过for each方法访问集合元素,for each是迭代器简化的写法
+  public void testForEach(){
+    System.out.println("有如下课程待选(通过for each访问):");
+    for(Object obj:coursesToSelect){
+      Course cr=(Course)obj;
+      System.out.println("课程:"+cr.id+","+cr.name);
+    }
+  }
+  
+  //修改List中的元素
+  public void testModify(){
+    coursesToSelect.set(4,new Course("7","毛概"));
+  }
+  
+  //删除List中的元素
+  public void testRemove(){
+    Course cr=(Course)coursesToSelect.get(4);
+    System.out.println("我是课程:"+cr.id+","+cr.name+",我即将被删除");
+    coursesToSelect.remove(cr);
+    System.out.println("成功删除课程!");
+    testForEach();
+  }
+  
+  public void testRemove2(){
+    System.out.println("即将删除4位置上的课程!");
+    coursesToSelect.remove(4);
+    System.out.println("成功删除课程!");
+    testForEach();
+  }
+  
+  public void testRemove3(){
+    System.out.println("即将删除4位置和5位置上的课程!");
+    Course[] courses={(Course)coursesToSelect.get(4),(Course)coursesToSelect.get(5)};
+    coursesToSelect.removeAll(Arrays.asList(courses));
+    System.out.println("成功删除课程!");
+    testForEach();
   }
   public static void main(String[] args){
     ListTest lt=new ListTest();
     lt.testAdd();
+    lt.testGet();
+    lt.testIterator();
+    lt.testForEach();
+    lt.testModify();
+    lt.testForEach();
+    lt.testRemove();
   }
 }
 </pre>
 <h3>output</h3>
 <pre>添加了课程:1,数据结构
-添加了课程:2,C语言</pre>
+添加了课程:2,C语言
+添加了课程:1,数据结构
+添加了两门课程:3,离散数学;4,汇编语言
+添加了两门课程:5,高等数学;6,大学英语
+有如下课程待选:
+课程:2,C语言
+课程:1,数据结构
+课程:5,高等数学
+课程:6,大学英语
+课程:1,数据结构
+课程:3,离散数学
+课程:4,汇编语言
+有如下课程待选(通过迭代器访问):
+课程:2,C语言
+课程:1,数据结构
+课程:5,高等数学
+课程:6,大学英语
+课程:1,数据结构
+课程:3,离散数学
+课程:4,汇编语言
+有如下课程待选(通过for each访问):
+课程:2,C语言
+课程:1,数据结构
+课程:5,高等数学
+课程:6,大学英语
+课程:1,数据结构
+课程:3,离散数学
+课程:4,汇编语言
+有如下课程待选(通过for each访问):
+课程:2,C语言
+课程:1,数据结构
+课程:5,高等数学
+课程:6,大学英语
+课程:7,毛概
+课程:3,离散数学
+课程:4,汇编语言
+我是课程:7,毛概,我即将被删除
+成功删除课程!
+有如下课程待选(通过for each访问):
+课程:2,C语言
+课程:1,数据结构
+课程:5,高等数学
+课程:6,大学英语
+课程:3,离散数学
+课程:4,汇编语言
+</pre>
 <p class="tiy"><a target="_blank" href="">亲自试一试</a></p>
 </div>
 
