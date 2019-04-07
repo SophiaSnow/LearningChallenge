@@ -1,0 +1,734 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-878633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-878633-1');
+</script>
+
+<meta charset="gbk" />
+ <link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/c5.css" />
+
+<title>Program</title>
+
+</head>
+
+<body class="browserscripting">
+
+<div id="wrapper">
+
+<div class="navbar navbar-inverse" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">我的学习手册</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#top">Java</a></li>
+                <li><a href="#summary-container">中文</a></li>
+                <li class="dropdown">
+                    <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">日语 <span class="caret"></span></a>   
+                </li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal">英语</a></li>
+				<li><a href="">经典</a></li>
+				<li><a href="#summary-container">Schedule</a></li>
+				<li><a href="#summary-container">每日作文练习</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="navsecond">
+
+<div id="course">
+<h2>Java异常与异常处理</h2>
+<ul>
+<li><a href="index.htm" title="JavaScript 教程">JS 教程</a></li>
+<li><a href="js_intro.htm" title="JavaScript 简介">JS 简介</a></li>
+<li class="currentLink"><a href="js_howto.htm" title="JavaScript 实现">JS 实现</a></li>
+<li><a href="js_form_validation.htm" title="JavaScript 表单验证">JS 验证</a></li>
+</ul>
+<h2>Java字符串</h2>
+<ul>
+<li><a href="js_htmldom.htm" title="JavaScript HTML DOM">DOM 简介</a></li>
+<li><a href="js_htmldom_html.htm" title="JavaScript HTML DOM - 改变 HTML">DOM HTML</a></li>
+<li><a href="js_htmldom_css.htm" title="JavaScript HTML DOM - 改变 CSS">DOM CSS</a></li>
+<li><a href="js_htmldom_events.htm" title="JavaScript HTML DOM 事件">DOM 事件</a></li>
+<li><a href="js_htmldom_elements.htm" title="JavaScript HTML DOM 元素（节点）">DOM 节点</a></li>
+</ul>
+<h2>Java常用类</h2>
+<ul>
+<li><a href="js_objects.htm" title="JavaScript 对象">JS 对象</a></li>
+<li><a href="js_obj_number.htm" title="JavaScript Number 对象">JS 数字</a></li>
+<li><a href="js_obj_string.htm" title="JavaScript String 对象">JS 字符串</a></li>
+<li><a href="js_obj_date.htm" title="JavaScript Date 对象">JS 日期</a></li>
+<li><a href="js_obj_array.htm" title="JavaScript Array 对象">JS 数组</a></li>
+<li><a href="js_obj_boolean.htm" title="JavaScript Boolean 对象">JS 逻辑</a></li>
+<li><a href="js_obj_math.htm" title="JavaScript Math 对象">JS 算数</a></li>
+<li><a href="js_obj_regexp.htm" title="JavaScript RegExp 对象">JS 正则表达式</a></li>
+</ul>
+<h2>Java集合框架</h2>
+<ul>
+<li><a href="" title="">集合框架概述</a></li>
+<li><a href="" title="">JS Screen</a></li>
+<li><a href="" title="">JS Cookies</a></li>
+</ul>
+<h2>JS 库</h2>
+<ul>
+<li><a href="js_libraries.htm" title="JavaScript 库">JS 库</a></li>
+<li><a href="js_library_jquery.htm" title="JavaScript - 测试 jQuery">JS jQuery</a></li>
+<li><a href="js_library_prototype.htm" title="JavaScript 测试 Prototype">JS Prototype</a></li>
+</ul>
+<h2>JS 实例和测验</h2>
+<ul>
+<li><a href="../example/jseg_examples.htm" title="JavaScript 实例">JS 实例</a></li>
+<li><a href="../example/jsrf_examples.htm" title="JavaScript 对象实例">JS 对象实例</a></li>
+<li><a href="js_quiz.htm" title="JavaScript 测验">JS 测验</a></li>
+<li><a href="js_summary.htm" title="JavaScript 总结">JS 总结</a></li>
+</ul>
+<h2>JS 参考手册</h2>
+<ul>
+<li><a href="../jsref/index.htm" title="JavaScript 和 HTML DOM 参考手册">JavaScript 对象</a></li>
+<li><a href="../jsref/index.htm" title="JavaScript 和 HTML DOM 参考手册">HTML DOM 对象</a></li>
+</ul>
+</div>
+<h2>JS 课外书</h2>
+<ul>
+<li><a href="index_pro.htm" title="JavaScript 高级教程">JS 高级教程</a></li>
+</ul>
+</div>
+
+<div id="maincontent">
+
+<h1>宝くじセンターシステム</h1>
+
+<div id="category">
+<h2>目录</h2>
+<p><a href="#gainian">1.機能</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#zuoyong">2.実現</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#duibi">3.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#jihekuangjia">4.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#collection">5.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p><a href="#exercise1">6.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#exercise2">7.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#hana">8.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#hana">9.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#hana">10.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+</div>
+
+<div id="gainian">
+<h2>一、查询数据库中的表&nbsp;&nbsp;<a href="#category" style="font-size:1px">category</a></h2>
+<pre>1.10.232.18.1 ttl（center DB）
+2.su -,pass:（切换到超级用户）
+3.su - app01usr（切换到普通用户）
+4.psql -p 27500 -d vcntdb_01 -U fsepuser 
+5.select * from t_affiliate where affiliate_assortment='45' and affiliate_id like '4%'; 
+</pre>
+<pre>psql的参数说明
+· -d,--dbname=DBNAME:默认连接的数据库
+· -p,--port=PORT:连接数据库服务器的端口号（"默认为5432"）
+· -U,--username=USERNAME:要连接数据库服务器的用户名
+· -h,--host=HOSTNAM:连接数据库服务器的主机IP或套接字目录（默认为"local socket"）
+· -c,--command=COMMAND:执行一条命令（或内置SQL）然后退出
+</pre>
+<p>1.psql的一些用法 https://itbilu.com/database/postgre/410auo8xZ.html</p>
+<p>1.1 数据库登录</p>
+<p>登录IP为192.168.1.3的服务器,并连接到名为"test"的数据库</p>
+<pre>
+$ psql -U postgres -H 192.168.1.3 -d test
+</pre>
+<p>1.2 切换数据库</p>
+<p>如果登录时未指定数据库,或需要切换到其它数据库,可以使用\c参数切换</p>
+<pre># \c dbname</pre>
+<p>1.3 查看所有数据库</p>
+<p>查看当前系统中有哪些数据库可以使用\l或\list参数</p>
+<pre># \l</pre>
+<p>1.4 查看数据库中的表</p>
+<p>查看当前数据库中所有的表,使用\d参数</p>
+<pre># \d</pre>
+<p>1.5 查看表中的字段</p>
+<p>查看指定表中的字段,使用\d dbtable参数</p>
+<pre># \d mytable</pre>
+<p>1.6 查看表信息</p>
+<p>查看表信息,使用\d+ dbtable</p>
+<pre># \d+ mytable</pre>
+<p>1.7 退出登录</p>
+<p>退出登录,使用\q参数</p>
+<pre># \q</pre>
+</div>
+
+<div id="zuoyong">
+<h2>二、查看当前server的日期&nbsp;&nbsp;<a href="#category" style="font-size:1px">category</a></h2>
+<pre>1.cd ~
+2.ls
+3.cd base/
+4.ls
+5.ll /var/jsc/app01/conf/CO/sysDateDef.properties
+6.view /var/jsc/app01/conf/CO/sysDateDef.properties
+</pre>
+sh simuMQ.sh SLT01 1 
+</div>
+
+<div id="duibi">
+<h2>三、起动batch&nbsp;&nbsp;<a href="#category" style="font-size:1px">category</a></h2>
+<pre>1.cd ../shell/
+2.ps aux | grep SLT01 
+3.sh PGBCMQ0100101.sh SLT01 &</pre>
+</div>
+
+<div id="jihekuangjia">
+<h2>四、linux相关command&nbsp;&nbsp;<a href="#category" style="font-size:1px">category</a></h2>
+<h3>1.Linux tail命令</h3>
+<pre>1.tail [参数] [文件]
+-f （循环读取）
+-c<数目> 显示的字节数</pre>
+<p>显示notes.log文件的最后10行</p>
+<pre>tail notes.log</pre>
+<p>跟踪名为notes.log的文件的增长情况,此命令显示notes.log文件的最后10行。当将某些行添加至notes.log文件时,tail命令会继续显示这些行。显示一直继续，直到按下Ctrl+C组合键停止显示</p>
+<pre>tail -f notes.log</pre>
+<p>显示文件notes.log的内容，从第20行至文件末尾</p>
+<pre>tail +20 notes.log</pre>
+<p>显示文件notes.log的最后10个字符</p>
+<pre>tail -c 10 notes.log</pre>
+<h3>2.Linux vi命令</h3>
+<p>基本上vi/vim共分为3种模式,分别是命令模式（Command mode）,输入模式（Insert mode）和底线命令模式（Last Line mode）</p>
+<h4>2.1 命令模式</h4>
+<p>用户刚刚启动vi/vim,便进入了命令模式</p>
+<p>此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。比如我们此时按下i,并不会输入一个字符,i被当作了一个命令</p>
+<p>以下是常用的几个命令:</p>
+<pre>i 切换到输入模式,以输入字符
+x 删除当前光标所在处的字符
+: 切换到底线命令模式,以在最底一行输入命令
+</pre>
+<h4>2.2 输入模式</h4>
+<p>在命令模式下按下i就进入了输入模式,在输入模式中,可以使用以下按键</p>
+<pre>
+Insert 切换光标为输入/替换模式,光标将变成竖线/下划线
+Esc 退出输入模式,切换到命令模式
+</pre>
+<h4>2.3 底线命令模式</h4>
+<p>在命令模式下按下:（英文冒号）就进入了底线命令模式</p>
+<p>在底线命令模式中,基本的命令有</p>
+<pre>:q 退出程序
+:w 保存文件
+Esc 退出底线命令模式
+</pre>
+<h5>实用步骤</h5>
+<pre>1.vi XXX.txt
+2.输入i（~表示没有任何东西）
+3.输入Esc,退出输入模式,进入命令模式
+4.输入:wq,保存退出</pre>
+<h3>3.Linux sh命令</h3>
+<h4>3.1 第一个shell脚本</h4>
+<p>打开文本编辑器(可以使用 vi/vim 命令来创建文件)，新建一个文件 test.sh，扩展名为 sh（sh代表shell），扩展名并不影响脚本执行，见名知意就好，如果你用 php 写 shell 脚本，扩展名就用 php 好了。</p>
+<p>输入一些代码，第一行一般是这样：</p>
+<pre>#!/bin/bash
+echo "Hello World!"</pre>
+<p>#! 是一个约定的标记，它告诉系统这个脚本需要什么解释器来执行，即使用哪一种 Shell。</p>
+<p>echo 命令用于向窗口输出文本。</p>
+<h4>3.2 运行shell脚本</h4>
+<h5>3.2.1 作为可执行程序</h5>
+<p>将上面的代码保存为 test.sh，并 cd 到相应目录：</p>
+<pre>chmod +x ./test.sh
+./test.sh</pre>
+<h5>3.2.2 作为解释器参数</h5>
+<p>直接运行解释器，其参数就是 shell 脚本的文件名</p>
+<pre>/bin/sh test.sh
+/bin/php test.php</pre>
+<h3>4.Linux grep命令</h3>
+<p>Linux grep命令用于查找文件里符合条件的字符串。</p>
+<p>在当前目录中，查找后缀有 file 字样的文件中包含 test 字符串的文件，并打印出该字符串的行。
+此时，可以使用如下命令：</p>
+<pre>grep test *file</pre>
+<p>#查找前缀有“test”的文件包含“test”字符串的文件</p>
+<pre>$ grep test test* 
+testfile1:This a Linux testfile!      #列出testfile1 文件中包含test字符的行  
+testfile_2:This is a linux testfile!  #列出testfile_2 文件中包含test字符的行  
+testfile_2:Linux test                 #列出testfile_2 文件中包含test字符的行 
+</pre>
+<p>反向查找。前面各个例子是查找并打印出符合条件的行，通过"-v"参数可以打印出不符合条件行的内容。</p>
+<p>查找文件名中包含 test 的文件中不包含test 的行，此时，使用的命令为：</p>
+<pre>grep -v test *test*
+-v 或 --revert-match : 显示不包含匹配文本的所有行。
+</pre>
+<h3>5.Linux ps命令</h3>
+<p>ps命令（Process Status）就是最基本同时也是非常强大的进程查看命令.</p>
+<h3>6.Linux处理目录常用命令</h3>
+<pre>6.1 ls:列出目录
+6.2 cd:切换目录
+6.3 pwd:显示目前的目录</pre>
+<h3>7.Linux ll命令</h3>ll -rt
+<h3>8.Linux ls命令</h3>
+</div>
+
+<div id="collection">
+<h2>五、Collection接口简介&nbsp;&nbsp;<a href="#category" style="font-size:1px">category</a></h2>
+<h3>Collection接口</h3>
+<p>1.是List,Set,Queue接口的父接口</p>
+<p>2.定义了可用于操作List,Set,Queue的方法--增删改查</p>
+<h3>List接口及其实现类</h3>
+<p>1.List是元素有序且可以重复的集合，被称为序列</p>
+<p>2.List可以精确地控制每个元素的插入位置，或删除某个位置元素</p>
+<p>3.ArrayList--数组序列,是List的一个重要实现类</p>
+<p>4.ArrayList底层是由数组实现的</p>
+</div>
+
+<div id="exercise1">
+<h2>六、实例练习1&nbsp;&nbsp;<a href="#category" style="font-size:1px">category</a></h2>
+<h3>List增删改查</h3>
+<pre>
+package test;
+import java.util.ArrayList;
+public class ListTest {
+  public static void main(String[] args) {
+    ArrayList strings = new ArrayList(); 
+    strings.add("Evan"); 
+    strings.add("Enguge"); 
+    strings.add("Adam"); 
+    System.out.println(strings.size()); 
+    System.out.println(strings.get(0)); 
+    System.out.println(strings.get(1)); 
+    strings.set(0, "goodbye"); 
+    strings.remove(1); 
+    for(int i=0;i&lt;strings.size();i++){
+      System.out.println(strings.get(i));
+    }
+    for(Object s:strings){
+      System.out.println(s);}
+  }
+}
+</pre>
+<p class="tiy"><a target="_blank" href="">亲自试一试</a></p>
+<h3>output</h3>
+<pre>
+3
+Evan
+Enguge
+goodbye
+Adam
+goodbye
+Adam
+</pre>
+</div>
+
+<div id="exercise2">
+<h2>七、实例练习2&nbsp;&nbsp;<a href="#category" style="font-size:1px">category</a></h2>
+<p>实现功能--模拟学生选课功能</p>
+<ul>
+<li>选择课程(往集合中添加课程)</li>
+<li>删除所选的某门课程(删除集合中的元素)</li>
+<li>查看所选课程</li>
+<li>修改所选课程</li>
+</ul>
+</div>
+
+<div>
+<h2>学生选课--创建学生类和课程类</h2>
+<h3>课程类Course.java</h3>
+<pre>
+package com.abc.collection;
+public class Course{
+  public String id;
+  public String name;  
+  public Course(String id,String name){
+    this.id=id;
+    this.name=name;
+  }
+}
+</pre>
+<p class="tiy"><a target="_blank" href="">亲自试一试</a></p>
+<pre>
+package com.abc.collection;
+public class Course{
+  private String id;
+  public String getId(){
+    return id;
+  }
+  public void setId(String id){
+    this.id=id;
+  }
+}
+</pre>
+<p class="tiy"><a target="_blank" href="">亲自试一试</a></p>
+<h3>学生类Student.java</h3>
+<pre>
+package com.abc.collection;
+import java.util.Set;
+import java.util.HashSet;
+public class Student{
+  public String id;
+  public String name;
+  public Set courses;
+  public Student(String id,String name){
+    this.id=id;
+    this.name=name;
+    this.courses=new HashSet();
+  }
+}
+</pre>
+<p class="tiy"><a target="_blank" href="">亲自试一试</a></p>
+</div>
+
+<div>
+<h2>学生选课--添加课程I</h2>
+<h3>备选课程类ListTest.java</h3>
+<pre>
+package com.abc.collection;
+import java.util.List;
+import java.util.ArrayList;
+public class ListTest{
+  //用于存放备选课程的List
+  public List coursesToSelect;
+  public ListTest(){
+    this.coursesToSelect=new ArrayList();
+  }
+  //用于往coursesToSelect中添加备选课程
+  public void testAdd(){
+    Course cr1=new Course("1","数据结构");
+    coursesToSelect.add(cr1);
+    //对象存入集合都变成Object类型,取出时需要类型转换
+    Course temp=(Course)coursesToSelect.get(0);
+    System.out.println("添加了课程:"+temp.id+","+temp.name);
+	
+    Course cr2=new Course("2","C语言");
+    coursesToSelect.add(0,cr2);
+    Course temp2=(Course)coursesToSelect.get(0);
+    System.out.println("添加了课程:"+temp2.id+","+temp2.name);
+	
+    //元素可重复
+    coursesToSelect.add(cr1);
+    Course temp0=(Course)coursesToSelect.get(2);
+    System.out.println("添加了课程:"+temp0.id+","+temp0.name);
+	
+    Course[] course={new Course("3","离散数学"),new Course("4","汇编语言")};
+    coursesToSelect.addAll(Arrays.asList(course));
+    Course temp3=(Course)coursesToSelect.get(3);
+    Course temp4=(Course)coursesToSelect.get(4);
+    System.out.println("添加了两门课程:"+temp3.id+","+temp3.name+";"+temp4.id+","+temp4.name);
+	
+    Course[] course2={new Course("5","高等数学"),new Course("6","大学英语")};
+    coursesToSelect.addAll(2,Arrays.asList(course2));
+    Course temp5=(Course)coursesToSelect.get(2);
+    Course temp6=(Course)coursesToSelect.get(3);
+    System.out.println("添加了两门课程:"+temp5.id+","+temp5.name+";"+temp6.id+","+temp6.name);
+  }
+  
+  //取得List中的元素的方法
+  public void testGet(){
+    int size=coursesToSelect.size();
+    System.out.println("有如下课程待选:");
+    for(int i=0;i&lt;size;i++){
+      Course cr=(Course)coursesToSelect.get(i);
+      System.out.println("课程:"+cr.id+","+cr.name);
+    }
+  }
+  
+  //通过迭代器来遍历List,迭代器本身也是一个接口
+  public void testIterator(){
+    //通过集合的iterator方法,取得迭代器的实例
+    Iterator it=coursesToSelect.iterator();
+    System.out.println("有如下课程待选(通过迭代器访问):");
+    while(it.hasNext()){
+      Course cr=(Course)it.next();
+      System.out.println("课程:"+cr.id+","+cr.name);
+    }
+  }
+  
+  //通过for each方法访问集合元素,for each是迭代器简化的写法
+  public void testForEach(){
+    System.out.println("有如下课程待选(通过for each访问):");
+    for(Object obj:coursesToSelect){
+      Course cr=(Course)obj;
+      System.out.println("课程:"+cr.id+","+cr.name);
+    }
+  }
+  
+  //修改List中的元素
+  public void testModify(){
+    coursesToSelect.set(4,new Course("7","毛概"));
+  }
+  
+  //删除List中的元素
+  public void testRemove(){
+    Course cr=(Course)coursesToSelect.get(4);
+    System.out.println("我是课程:"+cr.id+","+cr.name+",我即将被删除");
+    coursesToSelect.remove(cr);
+    System.out.println("成功删除课程!");
+    testForEach();
+  }
+  
+  public void testRemove2(){
+    System.out.println("即将删除4位置上的课程!");
+    coursesToSelect.remove(4);
+    System.out.println("成功删除课程!");
+    testForEach();
+  }
+  
+  public void testRemove3(){
+    System.out.println("即将删除4位置和5位置上的课程!");
+    Course[] courses={(Course)coursesToSelect.get(4),(Course)coursesToSelect.get(5)};
+    coursesToSelect.removeAll(Arrays.asList(courses));
+    System.out.println("成功删除课程!");
+    testForEach();
+  }
+  public static void main(String[] args){
+    ListTest lt=new ListTest();
+    lt.testAdd();
+    lt.testGet();
+    lt.testIterator();
+    lt.testForEach();
+    lt.testModify();
+    lt.testForEach();
+    lt.testRemove();
+  }
+}
+</pre>
+<h3>output</h3>
+<pre>添加了课程:1,数据结构
+添加了课程:2,C语言
+添加了课程:1,数据结构
+添加了两门课程:3,离散数学;4,汇编语言
+添加了两门课程:5,高等数学;6,大学英语
+有如下课程待选:
+课程:2,C语言
+课程:1,数据结构
+课程:5,高等数学
+课程:6,大学英语
+课程:1,数据结构
+课程:3,离散数学
+课程:4,汇编语言
+有如下课程待选(通过迭代器访问):
+课程:2,C语言
+课程:1,数据结构
+课程:5,高等数学
+课程:6,大学英语
+课程:1,数据结构
+课程:3,离散数学
+课程:4,汇编语言
+有如下课程待选(通过for each访问):
+课程:2,C语言
+课程:1,数据结构
+课程:5,高等数学
+课程:6,大学英语
+课程:1,数据结构
+课程:3,离散数学
+课程:4,汇编语言
+有如下课程待选(通过for each访问):
+课程:2,C语言
+课程:1,数据结构
+课程:5,高等数学
+课程:6,大学英语
+课程:7,毛概
+课程:3,离散数学
+课程:4,汇编语言
+我是课程:7,毛概,我即将被删除
+成功删除课程!
+有如下课程待选(通过for each访问):
+课程:2,C语言
+课程:1,数据结构
+课程:5,高等数学
+课程:6,大学英语
+课程:3,离散数学
+课程:4,汇编语言
+</pre>
+<p class="tiy"><a target="_blank" href="">亲自试一试</a></p>
+</div>
+
+<div id="intro">
+<p><strong>HTML 中的脚本必须位于 &lt;script&gt; 与 &lt;/script&gt; 标签之间。</strong></p>
+<p><strong>脚本可被放置在 HTML 页面的 &lt;body&gt; 和 &lt;head&gt; 部分中。</strong></p>
+</div>
+
+
+<div>
+<h2>&lt;script&gt; 标签</h2>
+<pre>
+$(&quot;button&quot;).click(function(){
+  $.ajaxSetup({url:&quot;demo_ajax_load.txt&quot;,success:function(result){
+    $(&quot;div&quot;).html(result);}});
+  $.ajax();
+});
+</pre>
+
+<p>如需在 HTML 页面中插入 JavaScript，请使用 &lt;script&gt; 标签。</p>
+
+<p>&lt;script&gt; 和 &lt;/script&gt; 会告诉 JavaScript 在何处开始和结束。</p>
+
+<p>&lt;script&gt; 和 &lt;/script&gt; 之间的代码行包含了 JavaScript：</p>
+
+<pre>
+&lt;script&gt;
+alert(&quot;My First JavaScript&quot;);
+&lt;/script&gt;
+</pre>
+
+<p>您无需理解上面的代码。只需明白，浏览器会解释并执行位于 &lt;script&gt; 和 &lt;/script&gt; 之间的 JavaScript。</p>
+
+<p>那些老旧的实例可能会在 &lt;script&gt; 标签中使用 type=&quot;text/javascript&quot;。现在已经不必这样做了。JavaScript 是所有现代浏览器以及 HTML5 中的默认脚本语言。</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div>
+<h2>&lt;head&gt; 中的 JavaScript 函数</h2>
+
+<p>在本例中，我们把一个 JavaScript 函数放置到 HTML 页面的 &lt;head&gt; 部分。</p>
+
+<p>该函数会在点击按钮时被调用：</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+<code>&lt;script&gt;
+function myFunction()
+{
+document.getElementById(&quot;demo&quot;).innerHTML=&quot;My First JavaScript Function&quot;;
+}
+&lt;/script&gt;</code>
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;h1&gt;My Web Page&lt;/h1&gt;
+
+&lt;p id=&quot;demo&quot;&gt;A Paragraph&lt;/p&gt;
+
+&lt;button type=&quot;button&quot; <span class="marked">onclick=&quot;myFunction()&quot;</span>&gt;Try it&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="../tiy/t_1127.htm">亲自试一试</a></p>
+</div>
+
+
+<div>
+<h2>&lt;body&gt; 中的 JavaScript 函数</h2>
+
+<p>在本例中，我们把一个 JavaScript 函数放置到 HTML 页面的 &lt;body&gt; 部分。</p>
+
+<p>该函数会在点击按钮时被调用：</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My Web Page&lt;/h1&gt;
+
+&lt;p id=&quot;demo&quot;&gt;A Paragraph&lt;/p&gt;
+
+&lt;button type=&quot;button&quot; <span class="marked">onclick=&quot;myFunction()&quot;</span>&gt;Try it&lt;/button&gt;
+
+<code>&lt;script&gt;
+function myFunction()
+{
+document.getElementById(&quot;demo&quot;).innerHTML=&quot;My First JavaScript Function&quot;;
+}
+&lt;/script&gt;</code>
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="../tiy/t_1128.htm">亲自试一试</a></p>
+
+<p class="tip"><span>提示：</span>我们把 JavaScript 放到了页面代码的底部，这样就可以确保在 &lt;p&gt; 元素创建之后再执行脚本。</p>
+</div>
+
+
+<div>
+<h2>外部的 JavaScript</h2>
+
+<p>也可以把脚本保存到外部文件中。外部文件通常包含被多个网页使用的代码。</p>
+
+<p>外部 JavaScript 文件的文件扩展名是 .js。</p>
+
+<p>如需使用外部文件，请在 &lt;script&gt; 标签的 &quot;src&quot; 属性中设置该 .js 文件：</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;script src=&quot;myScript.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="../tiy/t_1129.htm">亲自试一试</a></p>
+
+<p>在 &lt;head&gt; 或 &lt;body&gt; 中引用脚本文件都是可以的。实际运行效果与您在 &lt;script&gt; 标签中编写脚本完全一致。</p>
+
+<p class="tip"><span>提示：</span>外部脚本不能包含 &lt;script&gt; 标签。</p>
+</div>
+
+
+<div id="bpn">
+
+</div>
+
+
+
+
+</div>
+<!-- maincontent end -->
+
+<div id="sidebar">
+
+<div id="tools">
+<h5 id="tools_reference"><a href="../jsref/index.htm">JavaScript 参考手册</a></h5>
+<h5 id="tools_example"><a href="../example/jseg_examples.htm">JavaScript 实例</a></h5>
+<h5 id="tools_quiz"><a href="js_quiz.htm">JavaScript 测验</a></h5>
+</div>
+
+
+
+</div>
+
+<div id="footer">
+<p id="p1">
+简体中文版提供的内容仅用于培训和测试，不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。
+</p>
+
+<p id="p2">
+使用条款和隐私条款。版权所有，保留一切权利。
+</p>
+</div>
+
+
+</div>
+<!-- wrapper end -->
+
+</body>
+
+</html>
